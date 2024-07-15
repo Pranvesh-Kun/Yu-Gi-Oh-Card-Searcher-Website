@@ -33,7 +33,7 @@ def search():
                 extra = True
             if data['data'][0]['type'] == "Spell Card" or data['data'][0]['type'] == "Trap Card":
                 non_monster = True
-            download_image(data['data'][0]['card_images'][0]['image_url_small'], f"C:/Users/VBALAJI/PycharmProjects/Custom Website/static/img/{data['data'][0]['id']}.jpg")
+            download_image(data['data'][0]['card_images'][0]['image_url_small'], f"static/img/{data['data'][0]['id']}.jpg")
             return render_template('index.html', card=data, extra=extra, nomon=non_monster)
         else:
             return render_template("index.html", card=False, extra=extra, nomon=non_monster)
